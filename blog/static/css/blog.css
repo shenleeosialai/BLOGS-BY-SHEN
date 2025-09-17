@@ -1,92 +1,110 @@
-body { 
-    margin:0;
-    padding:0;
-    font-family:helvetica, sans-serif; 
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap');
+
+body {
+    background-color: #000;
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
 }
 
-a { 
-    color:#00abff;
-    text-decoration:none; 
+a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-h1 { 
-    font-weight:normal;
-    border-bottom:1px solid #bbb;
-    padding:0 0 10px 0;
+a:hover {
+    text-decoration: underline;
 }
 
-h2 {
-    font-weight:normal;
-    margin:30px 0 0;
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Georgia', serif;
+    font-weight: 600;
+    color: #ffffff;
 }
 
-#content { 
-    float:left;
-    width:60%;
-    padding:0 0 0 30px; 
+p {
+    color: #ccc;
 }
 
-#sidebar { 
-    float:right;
-    width:30%;
-    padding:10px;
-    background:#efefef; 
-    height:100%;
+/*  base */
+header.blog-header {
+    text-align: center;
+    padding: 1rem 1rem 1rem;
+    border-bottom: .5px solid #444;
 }
 
-p.date { 
-    color:#ccc;
-    font-family: georgia, serif;
-    font-size: 12px;
-    font-style: italic; 
+header.blog-header h1 {
+    font-size: 6rem;
+    letter-spacing: 2px;
+    margin: 0;
+    font-weight: 500;
+    font-family: "UnifrakturCook", cursive;
 }
 
-/* pagination */
-.pagination { 
-    margin:40px 0; 
-    font-weight:bold;
+header.blog-header .subtitle {
+    font-size: 1.2rem;
+    color: #999;
+    font-style: italic;
+    letter-spacing: 0.5px;
+    margin-top: 0.2rem;
 }
 
-/* forms */
-label { 
-    float:left;
-    clear:both;
-    color:#333;
-    margin-bottom:4px; 
-}
-input, textarea { 
-    clear:both;
-    float:left;
-    margin:0 0 10px;
-    background:#ededed;
-    border:0;
-    padding:6px 10px;
-    font-size:12px;
-}
-input[type=submit] {
-    font-weight:bold;
-    background:#00abff;
-    color:#fff;
-    padding:10px 20px;
-    font-size:14px;
-    text-transform:uppercase; 
-}
-.errorlist { 
-    color:#cc0033;
-    float:left;
-    clear:both;
-    padding-left:10px; 
+main#content {
+    max-width: 1000px;
+    margin: auto;
+    padding: 1rem;
 }
 
-/* comments */
-.comment {
-    padding:10px;
+/* Responsive */
+@media (max-width: 600px) {
+    header.blog-header h1 {
+        font-size: 2rem;
+    }
+
+    header.blog-header .subtitle {
+        font-size: 1rem;
+    }
+
+    main#content {
+        padding: 1.5rem 1rem;
+    }
 }
-.comment:nth-child(even) {
-    background:#efefef;
+
+.nyt-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
 }
-.comment .info {
-    font-weight:bold;
-    font-size:12px;
-    color:#666;
+
+.nyt-main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.nyt-article {
+    border-bottom: 1px solid #333;
+    padding-bottom: 1rem;
+}
+
+.nyt-sidebar {
+    padding: 1rem;
+    background-color: #111;
+    border-radius: 6px;
+}
+
+.nyt-image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 1rem;
 }

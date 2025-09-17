@@ -12,6 +12,10 @@ class PostAdmin(admin.ModelAdmin):
     date_hierarchy = 'publish'
     ordering = ('status', 'publish')
 
+    # Add this line to show the image field in the form
+    fields = ('title', 'slug', 'author', 'image', 'body', 'tags', 'status',
+              'publish')
+
 
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):

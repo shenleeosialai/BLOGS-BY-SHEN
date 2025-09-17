@@ -28,6 +28,7 @@ class Post(models.Model):
     publish = models.DateTimeField(default=timezone.now)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
+    image = models.ImageField(upload_to='blog_images/', blank=True, null=True)
     status = models.CharField(max_length=2,
                               choices=Status.choices,
                               default=Status.DRAFT)
